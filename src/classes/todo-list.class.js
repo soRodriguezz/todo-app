@@ -26,7 +26,7 @@ export class TodoList {
   }
 
   eliminarCompletados() {
-    this.todos = this.todos.filter((todo) => !todo.completado);
+    this.todos = this.todos.filter(todo => !todo.completado);
     this.guardarLocalStorage();
   }
 
@@ -35,10 +35,10 @@ export class TodoList {
   }
 
   cargarLocalStorage() {
-    this.todos = localStorage.getItem("todo")
+    this.todos = (localStorage.getItem("todo"))
       ? JSON.parse(localStorage.getItem("todo"))
       : [];
 
-    this.todos = this.todos.map(obj => Todo.fromJson(obj));
+    this.todos = this.todos.map(Todo.fromJson);
   }
 }

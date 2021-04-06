@@ -1,5 +1,4 @@
 import { Todo } from "../classes";
-
 import { todoList } from "../index";
 
 // Referencia en HTML.
